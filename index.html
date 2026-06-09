@@ -6,12 +6,12 @@
   
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <meta name="keywords" content="sanket, ajit, gawali, sanketajitgawali">
-  <meta property="og:title" content="sanket profile ">
-  <meta property="og:description" content="sanket gawali profile provide deep introduction of a devops enginner and a candidate with many skills #devops #enginner #cloud ">
-  <meta property="og:url" content="https://www.linkedin.com/in/sanketagawali">
+  <meta name="keywords" content="sanket gawali, devops engineer, kubernetes, terraform, ansible, aws, cloud engineer, nashik, sanketagawali">
+  <meta property="og:title" content="Sanket Gawali – DevOps Engineer | Kubernetes · Terraform · Multi-Cloud">
+  <meta property="og:description" content="Sanket Gawali is a DevOps Engineer with 3+ years of experience in CI/CD, Kubernetes, Terraform, AWS EKS, Helm, Grafana, and multi-cloud infrastructure.">
+  <meta property="og:url" content="https://gawali1256.github.io/Profile_S/">
   
-  <title>sanket gawali</title>
+  <title>Sanket Gawali – DevOps Engineer | Kubernetes · Terraform · AWS</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   
@@ -32,18 +32,273 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/virtual.css">
   
   <link rel="stylesheet" type="text/css" href="./assets/css/topbar.virtual.css">
+
+  <style>
+    /* ── GLOBAL ────────────────────────────────────── */
+    :root {
+      --blue-1: #2960f7;
+      --blue-2: #1a3fc9;
+      --accent: #00c6ff;
+      --gradient: linear-gradient(135deg, #2960f7 0%, #00c6ff 100%);
+      --gradient-dark: linear-gradient(135deg, #1a3fc9 0%, #2960f7 100%);
+      --shadow-card: 0 8px 32px rgba(41, 96, 247, 0.12);
+      --shadow-hover: 0 16px 48px rgba(41, 96, 247, 0.22);
+    }
+
+    * { transition: box-shadow 0.25s ease, transform 0.25s ease; }
+
+    /* ── NAVBAR ────────────────────────────────────── */
+    .navbar.sticky { backdrop-filter: blur(10px); }
+    .navbar-brand {
+      font-weight: 700 !important;
+      letter-spacing: 1px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ── HERO ──────────────────────────────────────── */
+    .vg-page.page-home { position: relative; }
+    .vg-page.page-home::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(10,18,50,0.78) 0%, rgba(41,96,247,0.45) 100%);
+      z-index: 0;
+    }
+    .caption-header { position: relative; z-index: 1; }
+    .caption-header h5 { letter-spacing: 3px; text-transform: uppercase; font-size: 0.8rem; opacity: 0.8; }
+    .caption-header .badge {
+      background: var(--gradient) !important;
+      color: #fff !important;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 20px rgba(41,96,247,0.4);
+    }
+    .caption-header h1 { font-size: 3.2rem; }
+    @media (max-width: 576px) { .caption-header h1 { font-size: 2rem; } }
+    .floating-button { position: relative; z-index: 1; }
+
+    /* ── SECTION HEADINGS ──────────────────────────── */
+    .vg-page h1.text-center, .vg-page h2.fw-normal, .container h1.fw-normal {
+      position: relative;
+      display: inline-block;
+    }
+    h1.fw-normal.wow.fadeIn::after,
+    h1.text-center.fw-normal.wow.fadeInUp::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+      margin: 8px auto 0;
+    }
+
+    /* ── PROFILE IMAGE ─────────────────────────────── */
+    .img-place img {
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+    }
+    .page-about .col-lg-4 .img-place img {
+      border-radius: 50%;
+      border: 4px solid transparent;
+      background-clip: padding-box;
+      box-shadow: 0 0 0 4px #2960f7, 0 8px 32px rgba(41,96,247,0.25);
+    }
+
+    /* ── ABOUT INFO LIST ───────────────────────────── */
+    .theme-list li { padding: 4px 0; }
+    .theme-list li b { color: #333; }
+
+    /* ── PROGRESS BARS ─────────────────────────────── */
+    .theme-blue .progress {
+      border-radius: 50px !important;
+      height: 10px !important;
+      background: #e8eeff !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .theme-blue .progress-bar {
+      background: var(--gradient) !important;
+      border-radius: 50px !important;
+      position: relative;
+      overflow: visible;
+    }
+    .theme-blue .progress-bar::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 14px; height: 14px;
+      background: var(--blue-1);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(41,96,247,0.5);
+    }
+    .progress-wrapper { margin-bottom: 20px; }
+    .progress-wrapper .caption { font-weight: 600; font-size: 0.85rem; color: #444; margin-bottom: 6px; display: block; }
+
+    /* ── TECH STACK BADGES ─────────────────────────── */
+    .badge-pill {
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+      cursor: default;
+      font-weight: 500 !important;
+      letter-spacing: 0.3px;
+    }
+    .badge-pill:hover {
+      transform: translateY(-3px) scale(1.07);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25) !important;
+    }
+
+    /* ── TIMELINE ──────────────────────────────────── */
+    .timeline li .title {
+      background: var(--gradient) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      font-weight: 700;
+    }
+    .timeline li::before {
+      background: var(--gradient) !important;
+      border-color: var(--blue-1) !important;
+    }
+    .timeline li .details h5 { font-weight: 600; color: #1a1a2e; }
+
+    /* ── SERVICE CARDS ─────────────────────────────── */
+    .card.card-service {
+      border: none !important;
+      border-radius: 16px !important;
+      box-shadow: var(--shadow-card) !important;
+      border-top: 3px solid transparent !important;
+      background: linear-gradient(white, white) padding-box,
+                  var(--gradient) border-box !important;
+      border-top: 3px solid !important;
+    }
+    .card.card-service:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover) !important;
+    }
+    .card.card-service .icon span { 
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.2rem !important;
+    }
+
+    /* ── CERTIFICATION CARDS ───────────────────────── */
+    #certifications .card.card-service {
+      border-radius: 16px !important;
+      border-top: 4px solid !important;
+      border-image: var(--gradient) 1 !important;
+      box-shadow: var(--shadow-card) !important;
+    }
+    #certifications .card.card-service:hover { transform: translateY(-5px); }
+
+    /* ── FUN FACT NUMBERS ──────────────────────────── */
+    .page-funfact .number {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800 !important;
+    }
+    .page-funfact span { color: rgba(255,255,255,0.85); letter-spacing: 1px; text-transform: uppercase; font-size: 0.78rem; }
+
+    /* ── PORTFOLIO CARDS ───────────────────────────── */
+    .grid-item .img-place { border-radius: 12px; overflow: hidden; }
+    .grid-item .img-caption {
+      background: linear-gradient(135deg, rgba(41,96,247,0.92) 0%, rgba(0,198,255,0.88) 100%) !important;
+    }
+    .grid-item .img-caption a, .grid-item .img-caption h5, .grid-item .img-caption p {
+      color: #fff !important;
+    }
+
+    /* ── BUTTONS ───────────────────────────────────── */
+    .theme-blue .btn-theme {
+      background: var(--gradient) !important;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 28px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(41,96,247,0.35);
+    }
+    .theme-blue .btn-theme:hover {
+      background: var(--gradient-dark) !important;
+      box-shadow: 0 6px 22px rgba(41,96,247,0.5);
+      transform: translateY(-2px);
+    }
+    .theme-blue .btn-theme-outline {
+      border-radius: 50px;
+      padding: 8px 24px;
+      font-weight: 600;
+    }
+    .theme-blue .btn-theme-outline:hover { transform: translateY(-2px); }
+
+    /* ── BADGE SUBHEAD ─────────────────────────────── */
+    .badge-subhead {
+      background: var(--gradient) !important;
+      color: #fff !important;
+      border-radius: 50px;
+      padding: 5px 16px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ── BLOG CARDS ────────────────────────────────── */
+    .page-blog .card {
+      border: none !important;
+      border-radius: 14px !important;
+      box-shadow: var(--shadow-card) !important;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .page-blog .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover) !important;
+    }
+    .page-blog .post-title { font-weight: 700; color: #1a1a2e !important; }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    .vg-footer {
+      background: linear-gradient(160deg, #0a1232 0%, #1a3fc9 100%) !important;
+    }
+    .vg-footer h1 { color: #fff; font-weight: 300; letter-spacing: 2px; }
+    .vg-footer .divider { border-color: rgba(255,255,255,0.2) !important; }
+    .vg-footer a { color: rgba(255,255,255,0.75) !important; transition: color 0.2s; }
+    .vg-footer a:hover { color: var(--accent) !important; text-decoration: none; }
+
+    /* ── BACK TO TOP ───────────────────────────────── */
+    .btn-back_to_top {
+      background: var(--gradient) !important;
+      border-radius: 50% !important;
+      box-shadow: 0 4px 15px rgba(41,96,247,0.4) !important;
+    }
+
+    /* ── ABOUT PAGE BG ─────────────────────────────── */
+    .page-about { background: #fff; }
+    .page-service { background: #f4f7ff; }
+    #certifications { background: linear-gradient(180deg, #f4f7ff 0%, #fff 100%) !important; }
+  </style>
 </head>
 
   <script type="application/ld+json">
-    {
+  {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "X Name",
-    "url": "gawali1256.github.io/Profile_S/", // Replace with X name website URL
+    "@type": "Person",
+    "name": "Sanket Gawali",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://gawali1256.github.io/Profile_S/",
+    "email": "sanketgawali531@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Nashik", "addressRegion": "Maharashtra", "addressCountry": "IN" },
     "sameAs": [
-      "gawali1256.github.io/Profile_S//https://www.sanketgawali.com/", // Link to Y name profile 1
-      "gawali1256.github.io/Profile_S//https://www.sanketgawali.com/" // Link to Y name profile 2
-      // Add more URLs if applicable
+      "https://www.linkedin.com/in/sanketagawali",
+      "https://github.com/gawali1256"
     ]
   }
   </script>
@@ -55,8 +310,6 @@
   </div>
   
   
-    </div>
-      
   <div class="vg-page page-home" id="home" style="background-image: url(./assets/img/bg_image_1.jpg)">
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
@@ -91,6 +344,7 @@
     </div> <!-- End Navbar -->
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
       <h1 class="fw-light mb-4">I'm <b class="fg-theme">Sanket</b> Gawali</h1>
       <div class="badge">DevOps Engineer | Kubernetes · Helm · Terraform · Multi-Cloud</div>
     </div> <!-- End Caption header -->
@@ -111,10 +365,10 @@
           <h5 class="fg-theme mb-3">DevOps Engineer | Multi-Cloud (AWS · Azure · GCP)</h5>
           <p class="text-muted">DevOps Engineer with 3+ years of experience automating deployments, managing multi-cloud infrastructure, and integrating monitoring &amp; alerting systems. My journey started with Linux system administration, which grew into a deep passion for DevOps and automation — reducing manual input, building reliable pipelines, and delivering scalable cloud-native solutions on AWS, Azure, and GCP. I specialise in CI/CD pipelines, Kubernetes &amp; Helm, Terraform IaC, Ansible, and observability stacks (Grafana · Prometheus). Quick learner, strong collaborator, and a firm believer in the power of infrastructure-as-code to transform engineering teams.</p>
           <ul class="theme-list">
-            <li><b>Lives In:</b> Nashik, Maharashtra</li>
+            <li><b>Lives In:</b> Nashik, Maharashtra, India</li>
             <li><b>Work:</b> DevOps Engineer, Aress Software and Education Technologies, Nashik</li>
-            <li><b>Age:</b> 25</li>
-            <li><b>Gender:</b> Male</li>
+            <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sanketagawali" target="_blank" class="fg-theme">linkedin.com/in/sanketagawali</a></li>
+            <li><b>GitHub:</b> <a href="https://github.com/gawali1256" target="_blank" class="fg-theme">github.com/gawali1256</a></li>
             <li><b>Certifications:</b> <a href="https://www.credly.com/badges/fdc9a363-023c-436d-9a5e-1390ac78da67/linked_in?t=scp99t" target="_blank" class="fg-theme">AWS SAA</a> &nbsp;·&nbsp; <a href="https://cloudskillsboost.google/public_profiles/d21ffa73-8109-4e52-ab66-d35ae2f46978/badges/8763205" target="_blank" class="fg-theme">Google GenAI</a> &nbsp;·&nbsp; <a href="https://cloudskillsboost.google/public_profiles/d21ffa73-8109-4e52-ab66-d35ae2f46978/badges/8781631" target="_blank" class="fg-theme">Google Cloud</a></li>
           </ul>
           <a href="https://drive.google.com/file/d/18SqOZ0wqE244qKrZoFvbrVhLqZKZVses/view?usp=sharing" class="btn btn-theme-outline" target="_blank">Download CV</a>
@@ -184,57 +438,93 @@
         </div>
       </div>
     </div>
+    <!-- Tech Stack Badges -->
+    <div class="container py-5">
+      <h2 class="text-center fw-normal wow fadeIn mb-4">Tech Stack</h2>
+      <div class="text-center wow fadeInUp" style="line-height: 2.4;">
+        <span class="badge badge-pill" style="background:#326CE5;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Kubernetes</span>
+        <span class="badge badge-pill" style="background:#0F1689;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Helm</span>
+        <span class="badge badge-pill" style="background:#7B42BC;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Terraform</span>
+        <span class="badge badge-pill" style="background:#EE0000;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Ansible</span>
+        <span class="badge badge-pill" style="background:#232F3E;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">AWS</span>
+        <span class="badge badge-pill" style="background:#0078D4;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Azure</span>
+        <span class="badge badge-pill" style="background:#4285F4;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">GCP</span>
+        <span class="badge badge-pill" style="background:#2496ED;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Docker</span>
+        <span class="badge badge-pill" style="background:#2088FF;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">GitHub Actions</span>
+        <span class="badge badge-pill" style="background:#343434;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">CircleCI</span>
+        <span class="badge badge-pill" style="background:#F46800;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Grafana</span>
+        <span class="badge badge-pill" style="background:#E6522C;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Prometheus</span>
+        <span class="badge badge-pill" style="background:#231F20;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Linux / RHEL</span>
+        <span class="badge badge-pill" style="background:#3776AB;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Python</span>
+        <span class="badge badge-pill" style="background:#D24939;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Jenkins</span>
+        <span class="badge badge-pill" style="background:#FC6D26;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">GitLab</span>
+        <span class="badge badge-pill" style="background:#CC0000;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">OpenShift</span>
+        <span class="badge badge-pill" style="background:#005571;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">ELK / Splunk</span>
+        <span class="badge badge-pill" style="background:#17A589;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Jira</span>
+        <span class="badge badge-pill" style="background:#FF9900;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">AWS EKS</span>
+        <span class="badge badge-pill" style="background:#1A73E8;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">CloudFormation</span>
+        <span class="badge badge-pill" style="background:#5C4EE5;color:#fff;font-size:0.85rem;padding:7px 14px;margin:4px;">Alertmanager</span>
+      </div>
+    </div>
+    <!-- End Tech Stack Badges -->
     <div class="container pt-5">
       <div class="row">
         <div class="col-md-6 wow fadeInRight">
           <h2 class="fw-normal">Education</h2>
           <ul class="timeline mt-4 pr-md-5">
             <li>
-              <div class="title">2023</div>
+              <div class="title">2020 – 2023</div>
               <div class="details">
-                <h5>Bachelor of Engineering (Computer Science)</h5>
-                <small class="fg-theme">Sandip Institute OF Technology And Research Center</small>
-                <p></p>
+                <h5>Bachelor of Engineering – Computer Engineering</h5>
+                <small class="fg-theme">Sandip Institute of Technology and Research Center, Nashik</small>
+                <p class="text-muted" style="font-size:0.85rem;">CGPA: 8.43 &nbsp;|&nbsp; Savitribai Phule Pune University</p>
               </div>
             </li>
             <li>
-              <div class="title">2019</div>
+              <div class="title">2017 – 2019</div>
               <div class="details">
-                <h5>HSC  </h5>
-                <small class="fg-theme">Bhonsala Military College</small>
+                <h5>HSC – Science</h5>
+                <small class="fg-theme">Bhonsala Military College, Nashik</small>
               </div>
             </li>
             <li>
               <div class="title">2017</div>
               <div class="details">
                 <h5>SSC</h5>
-                <small class="fg-theme">St. Francis High School</small>
+                <small class="fg-theme">St. Francis High School, Nashik</small>
               </div>
             </li>
           </ul>
           <br><span></span>
           <div class="col-md-6 wow fadeInRight">
-          <h2 class="fw-normal">Volunteer</h2>
+          <h2 class="fw-normal">Community &amp; Courses</h2>
             <ul class="timeline mt-4 pr-md-5">
               <li>
                 <div class="title">2023</div>
                 <div class="details">
-                  <h5>Linux world </h5>
-                  <small class="fg-theme">Technical  </small>
+                  <h5>RHCSA V-9 Training</h5>
+                  <small class="fg-theme">ARTH – The School of Technologies</small>
                 </div>
               </li>
               <li>
-                <div class="title">2022</div>
+                <div class="title">2023</div>
                 <div class="details">
-                  <h5>technical event</h5>
-                  <small class="fg-theme">technical event</small>
+                  <h5>Red Hat Ansible Automation (RH294)</h5>
+                  <small class="fg-theme">ARTH – The School of Technologies</small>
                 </div>
               </li>
               <li>
-                <div class="title">2022</div>
+                <div class="title">2023</div>
                 <div class="details">
-                  <h5>NGO </h5>
-                  <small class="fg-theme">NGO Work</small>
+                  <h5>Technical Volunteer</h5>
+                  <small class="fg-theme">Linux World – Community Mentor</small>
+                </div>
+              </li>
+              <li>
+                <div class="title">Active</div>
+                <div class="details">
+                  <h5>Community Member</h5>
+                  <small class="fg-theme">Docker · AWS Nashik · GCP User Group</small>
                 </div>
               </li>
             </ul>
