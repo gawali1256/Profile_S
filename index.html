@@ -102,11 +102,31 @@
       border-radius: 12px;
       box-shadow: var(--shadow-card);
     }
-    .page-about .col-lg-4 .img-place img {
-      border-radius: 50%;
-      border: 4px solid transparent;
-      background-clip: padding-box;
-      box-shadow: 0 0 0 4px #2960f7, 0 8px 32px rgba(41,96,247,0.25);
+
+    /* profile circle — no square, no background, just the circle */
+    .profile-img-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible !important;  /* prevent base .img-place clipping */
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      width: auto !important;
+      height: auto !important;
+    }
+    .profile-img-wrap img {
+      width: 270px !important;
+      height: 270px !important;
+      max-width: none !important;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 50% !important;
+      border: 4px solid #fff !important;
+      outline: 5px solid var(--blue-1);
+      box-shadow: 0 12px 40px rgba(41,96,247,0.3) !important;
+      background: transparent !important;
+      display: block;
     }
 
     /* ── ABOUT INFO LIST ───────────────────────────── */
@@ -284,6 +304,105 @@
     .page-about { background: #fff; }
     .page-service { background: #f4f7ff; }
     #certifications { background: linear-gradient(180deg, #f4f7ff 0%, #fff 100%) !important; }
+
+    /* ── PYPI HIGHLIGHT ────────────────────────────── */
+    .pypi-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f0f4ff;
+      border: 1px solid #c7d4fd;
+      border-left: 4px solid var(--blue-1);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      color: #444;
+    }
+    .pypi-highlight .pypi-icon { font-size: 1.1rem; }
+
+    /* ── RESPONSIVE ────────────────────────────────── */
+
+    /* Tablet & below (≤992px) */
+    @media (max-width: 992px) {
+      .caption-header h1 { font-size: 2.6rem; }
+      .profile-img-wrap img { width: 220px !important; height: 220px !important; }
+      .hero-sub { font-size: 0.92rem; }
+    }
+
+    /* Small tablet (≤768px) */
+    @media (max-width: 768px) {
+      .caption-header h1 { font-size: 2.2rem; }
+      .hero-badge { font-size: 0.75rem; padding: 6px 14px; }
+      .hero-sub { font-size: 0.88rem; max-width: 100%; }
+      .btn-hero-primary, .btn-hero-outline { padding: 10px 22px; font-size: 0.88rem; }
+
+      /* About section stacks vertically — center image */
+      .page-about .row { text-align: center; }
+      .profile-img-wrap { margin-bottom: 24px; }
+      .theme-list { text-align: left; display: inline-block; }
+
+      /* Skills full width */
+      .progress-wrapper { margin-bottom: 14px; }
+
+      /* Timeline compact */
+      .timeline li .details h5 { font-size: 0.95rem; }
+      .timeline li p { font-size: 0.82rem; }
+
+      /* Service cards 2-per-row */
+      .card.card-service { margin-bottom: 20px; }
+
+      /* Certification cards stack */
+      #certifications .card.card-service { margin-bottom: 20px; }
+
+      /* Fun facts 2-per-row */
+      .page-funfact .number { font-size: 2.4rem; }
+
+      /* Tech badges smaller */
+      .badge-pill { font-size: 0.78rem !important; padding: 5px 10px !important; }
+
+      /* Footer stack */
+      .vg-footer .col-lg-5,
+      .vg-footer .col-md-6,
+      .vg-footer .col-md-7 { margin-bottom: 20px; }
+    }
+
+    /* Mobile (≤576px) */
+    @media (max-width: 576px) {
+      .caption-header h1 { font-size: 1.9rem; }
+      .hero-eyebrow { font-size: 0.72rem; }
+      .hero-badge { font-size: 0.7rem; padding: 5px 12px; letter-spacing: 0.3px; }
+      .hero-sub { display: none; } /* hide on very small screens to avoid clutter */
+      .hero-actions { flex-direction: column; align-items: center; gap: 10px; }
+      .btn-hero-primary, .btn-hero-outline { width: 200px; text-align: center; }
+      .hero-socials { gap: 8px; }
+      .hero-social-link { width: 36px; height: 36px; font-size: 0.88rem; }
+
+      /* Profile image smaller on mobile */
+      .profile-img-wrap img { width: 180px !important; height: 180px !important; }
+
+      /* Fun facts 1-per-row on very small */
+      .page-funfact .col-md-6 { text-align: center; }
+      .page-funfact .number { font-size: 2rem; }
+
+      /* Section headings */
+      h1.fw-light { font-size: 1.8rem; }
+
+      /* Portfolio captions always visible on mobile */
+      .img-caption { opacity: 1 !important; }
+
+      /* pypi highlight wrap */
+      .pypi-highlight { flex-wrap: wrap; font-size: 0.82rem; }
+
+      /* Navbar brand */
+      .navbar-brand { font-size: 1.1rem; }
+    }
+
+    /* Very small (≤400px) */
+    @media (max-width: 400px) {
+      .caption-header h1 { font-size: 1.6rem; }
+      .profile-img-wrap img { width: 150px !important; height: 150px !important; }
+      .badge-pill { font-size: 0.7rem !important; padding: 4px 8px !important; margin: 3px !important; }
+    }
   </style>
 </head>
 
@@ -355,8 +474,8 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 py-3">
-          <div class="img-place wow fadeInUp">
-            <img src="./assets/img/profile.jpg" alt="">
+          <div class="profile-img-wrap wow fadeInUp">
+            <img src="./assets/img/profile_new.jpg" alt="Sanket Gawali">
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
@@ -371,6 +490,10 @@
             <li><b>GitHub:</b> <a href="https://github.com/gawali1256" target="_blank" class="fg-theme">github.com/gawali1256</a></li>
             <li><b>Certifications:</b> <a href="https://www.credly.com/badges/fdc9a363-023c-436d-9a5e-1390ac78da67/linked_in?t=scp99t" target="_blank" class="fg-theme">AWS SAA</a> &nbsp;·&nbsp; <a href="https://cloudskillsboost.google/public_profiles/d21ffa73-8109-4e52-ab66-d35ae2f46978/badges/8763205" target="_blank" class="fg-theme">Google GenAI</a> &nbsp;·&nbsp; <a href="https://cloudskillsboost.google/public_profiles/d21ffa73-8109-4e52-ab66-d35ae2f46978/badges/8781631" target="_blank" class="fg-theme">Google Cloud</a></li>
           </ul>
+          <div class="pypi-highlight mt-3 mb-3">
+            <span class="pypi-icon">📦</span>
+            <span class="pypi-text">Published on <strong>PyPI</strong>: <a href="https://pypi.org/project/k8s-debug-tool/" target="_blank" class="fg-theme">k8s-debug-tool</a> v0.2.1 &nbsp;·&nbsp; 74+ downloads/month</span>
+          </div>
           <a href="https://drive.google.com/file/d/18SqOZ0wqE244qKrZoFvbrVhLqZKZVses/view?usp=sharing" class="btn btn-theme-outline" target="_blank">Download CV</a>
         </div>
       </div>
@@ -713,8 +836,8 @@
           <span>Certifications</span>
         </div>
         <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-          <h1 class="number" data-number="5">5</h1>
-          <span>Tech Communities</span>
+          <h1 class="number" data-number="74">74+</h1>
+          <span>PyPI Downloads / Month</span>
         </div>
       </div>
     </div>
@@ -741,11 +864,11 @@
           </div>
         </div>
         <div class="grid-item apps ios wow zoomIn">
-          <div class="img-place" data-src="./assets/img/work/work-2.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Kubernetes Debug CLI Tool</h5> <p>Python · Kubernetes · CLI — Instantly detects crashing pods and common K8s failure states</p>">
+          <div class="img-place" data-src="./assets/img/work/work-2.jpg" data-fancybox data-caption="<h5 class='fg-theme'>k8s-debug-tool — Published on PyPI</h5> <p>Python · Kubernetes · CLI · v0.2.1 · 74+ downloads/month — CLI to inspect pods and common K8s failure states</p>">
             <img src="./assets/img/work/work-2.jpg" alt="">
             <div class="img-caption">
-              <a href="https://github.com/gawali1256/k8s-debug-tool" class="fg-theme">K8s Debug Tool</a>
-              <p>Python · Kubernetes · CLI</p>
+              <a href="https://github.com/gawali1256/k8s-debug-tool" class="fg-theme">k8s-debug-tool <span style="background:#3775A9;color:#fff;font-size:0.7rem;padding:2px 7px;border-radius:4px;margin-left:4px;">PyPI</span></a>
+              <p>Python · Kubernetes · CLI · v0.2.1</p>
             </div>
           </div>
         </div>
